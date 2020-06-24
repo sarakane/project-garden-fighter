@@ -1,16 +1,19 @@
 export class Character {
-  constructor(name, charClass, stats, inventory, equipped) {
+  constructor(name, charClass, stats, equipped) {
     this.name = name;
     this.charClass = charClass;
     this.stats = stats;
     this.level = 1;
-    this.inventory = inventory;
+    this.inventory = [];
     this.equipped = equipped;  
   }
 
+  addItem(item) {
+    //this.inventory.push(item);
+  }
 };
 
-class Fighter {
+export class Fighter {
   constructor() {
     this.name = "Fighter";
     this.stats = {
@@ -20,7 +23,6 @@ class Fighter {
     this.equipped = {
       shovel: [2, 0]
     }
-    this.inventory = [];
   };
 };
 
@@ -34,11 +36,10 @@ export class Wizard {
     this.equipped = {
       wateringCan: [0, 2]
     }
-    this.inventory = [];
   }
 };
 
-class Rogue{
+export class Rogue{
   constructor() {
     this.name = "Rogue";
     this.stats = {
@@ -48,6 +49,6 @@ class Rogue{
     this.equipped = {
       spade: [1, 1]
     }
-    this.inventory = [];
-    }
+  }
 };
+
