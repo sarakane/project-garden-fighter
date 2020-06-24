@@ -19,6 +19,12 @@ describe('Character', () => {
   test('The program should allow the user to store items in their inventory', () => {
     character.addItem("slug potion");
     expect(character.inventory).toContain("slug potion");
+  });
+
+  test('The program should allow the user to drop items from their inventory', () => {
+    character.addItem("slug potion");
+    character.dropItem("slug potion");
+    expect(character.inventory).toEqual(expect.not.arrayContaining(["slug potion"]));
     console.log(character);
   });
 })

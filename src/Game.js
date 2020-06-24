@@ -11,6 +11,10 @@ export class Character {
   addItem(item) {
     this.inventory.push(item);
   }
+
+  dropItem(item) {
+    
+  }
 };
 
 export class Fighter {
