@@ -1,4 +1,4 @@
-# _RPG_
+# _Project Garden Fighter_
 
 #### _JavaScript/jQuery Exercise for [Epicodus](https://www.epicodus.com/), 2020.06.24_
 
