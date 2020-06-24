@@ -9,7 +9,7 @@ export class Character {
   }
 
   addItem(item) {
-    //this.inventory.push(item);
+    this.inventory.push(item);
   }
 };
 

@@ -14,11 +14,11 @@ describe('Character', () => {
 
   test('The program should allow the user to select a class for their character', () => {
     expect(character.charClass).toEqual("Wizard");
-    console.log(character);
   });
 
   test('The program should allow the user to store items in their inventory', () => {
     character.addItem("slug potion");
     expect(character.inventory).toContain("slug potion");
+    console.log(character);
   });
 })
