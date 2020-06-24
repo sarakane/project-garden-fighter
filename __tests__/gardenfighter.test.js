@@ -1,4 +1,5 @@
 import { Character } from './../src/Game.js';
+import { Wizard } from './../src/Game.js';
 
 describe('Character', () => {
 
@@ -11,5 +12,6 @@ describe('Character', () => {
     const wizard = new Wizard();
     const character = new Character("Gandalf", wizard.name, wizard.stats, wizard.inventory, wizard.equipped);
     expect(character.charClass).toEqual("Wizard");
+    console.log(character);
   });
 })

@@ -24,17 +24,17 @@ class Fighter {
   };
 };
 
-class Wizard {
+export class Wizard {
   constructor() {
-    // this.name = "Wizard";
-    // this.stats = {
-    //   strength: 1,
-    //   magic: 5
-    // };
-    // this.equipped = {
-    //   wateringCan: [0, 2]
-    // }
-    // this.inventory = [];
+    this.name = "Wizard";
+    this.stats = {
+      strength: 1,
+      magic: 5
+    };
+    this.equipped = {
+      wateringCan: [0, 2]
+    }
+    this.inventory = [];
   }
 };
 
