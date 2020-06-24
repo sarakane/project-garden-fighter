@@ -13,7 +13,10 @@ export class Character {
   }
 
   dropItem(item) {
-    
+    const droppedItem = this.inventory.indexOf(item);
+    if (droppedItem >= 0) {
+    this.inventory.splice(droppedItem, 1);
+    }
   }
 };
 

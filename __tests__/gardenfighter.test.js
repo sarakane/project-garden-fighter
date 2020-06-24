@@ -22,7 +22,9 @@ describe('Character', () => {
   });
 
   test('The program should allow the user to drop items from their inventory', () => {
+    character.addItem("flower seeds")
     character.addItem("slug potion");
+    character.addItem("soil");
     character.dropItem("slug potion");
     expect(character.inventory).toEqual(expect.not.arrayContaining(["slug potion"]));
     console.log(character);
