@@ -20,8 +20,34 @@ class Fighter {
     this.equipped = {
       shovel: [2, 0]
     }
+    this.inventory = [];
+  };
+};
+
+class Wizard {
+  constructor() {
+    // this.name = "Wizard";
+    // this.stats = {
+    //   strength: 1,
+    //   magic: 5
+    // };
+    // this.equipped = {
+    //   wateringCan: [0, 2]
+    // }
+    // this.inventory = [];
   }
 };
 
-let fighter = new Fighter();
-let character = new Character(name, fighter.name, fighter.stats )
+class Rogue{
+  constructor() {
+    this.name = "Rogue";
+    this.stats = {
+      strength: 3,
+      magic: 3
+    };
+    this.equipped = {
+      spade: [1, 1]
+    }
+    this.inventory = [];
+    }
+};
