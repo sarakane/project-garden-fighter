@@ -20,9 +20,9 @@ export class Character {
   }
 
   equipWeapon(weapon) {
-    // this.equipped.push(weapon);
-    // this.stats.strength += weapon.strength;
-    // this.stats.magic += weapon.magic;
+    this.equipped.push(weapon);
+    this.stats.strength += weapon.strength;
+    this.stats.magic += weapon.magic;
   } 
 
 };
