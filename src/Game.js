@@ -1,11 +1,11 @@
 export class Character {
-  constructor(name) {
-    this.name = "";
-/*     this.charClass = charClass;
+  constructor(name, charClass, stats, inventory, equipped) {
+    this.name = name;
+    this.charClass = charClass;
     this.stats = stats;
     this.level = 1;
     this.inventory = inventory;
-    this.equipped = equipped;  */
+    this.equipped = equipped;  
   }
 
 };
