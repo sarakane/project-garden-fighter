@@ -1,11 +1,11 @@
 export class Character {
-  constructor(name, charClass, stats, equipped) {
+  constructor(name, charClass, stats) {
     this.name = name;
     this.charClass = charClass;
     this.stats = stats;
     this.level = 1;
     this.inventory = [];
-    this.equipped = equipped;  
+    this.equipped = [];  
   }
 
   addItem(item) {
@@ -18,6 +18,13 @@ export class Character {
     this.inventory.splice(droppedItem, 1);
     }
   }
+
+  equipWeapon(weapon) {
+    // this.equipped.push(weapon);
+    // this.stats.strength += weapon.strength;
+    // this.stats.magic += weapon.magic;
+  } 
+
 };
 
 export class Fighter {
@@ -40,9 +47,6 @@ export class Wizard {
       strength: 1,
       magic: 5
     };
-    this.equipped = {
-      wateringCan: [0, 2]
-    }
   }
 };
 
@@ -53,9 +57,17 @@ export class Rogue{
       strength: 3,
       magic: 3
     };
-    this.equipped = {
+    this.equipped = [{
       spade: [1, 1]
-    }
+    }]
   }
 };
+
+export class Weapon {
+  constructor(name, strength, magic) {
+    this.name = name;
+    this.strength = strength;
+    this.magic = magic;
+  }
+}
 
