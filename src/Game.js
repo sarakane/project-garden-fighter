@@ -3,7 +3,7 @@ import { Weapon } from "./Weapon";
 
 export class Game {
   constructor (character) {
-    //this.character = character;
+    this.character = character;
   }
   giveCharacterStartingWeapon() {
     if(this.character.charClass === "Fighter"){
