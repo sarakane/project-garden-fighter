@@ -20,13 +20,21 @@ export class Character {
   }
 
   equipWeapon(weapon) {
-    this.equipped.push(weapon);
-    this.stats.strength += weapon.strength;
-    this.stats.magic += weapon.magic;
+    if (this.inventory.includes(weapon)){
+      this.equipped.push(weapon);
+      this.dropItem(weapon);
+      this.stats.strength += weapon.strength;
+      this.stats.magic += weapon.magic;
+    }
   } 
+
+  unequipWeapon(weapon) {
+    
+  }
 
 };
 
+  
 export class Fighter {
   constructor() {
     this.name = "Fighter";
@@ -34,10 +42,7 @@ export class Fighter {
       strength: 5,
       magic: 1
     };
-    this.equipped = {
-      shovel: [2, 0]
-    }
-  };
+  }
 };
 
 export class Wizard {
@@ -57,9 +62,6 @@ export class Rogue{
       strength: 3,
       magic: 3
     };
-    this.equipped = [{
-      spade: [1, 1]
-    }]
   }
 };
 

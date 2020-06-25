@@ -32,7 +32,15 @@ describe('Character', () => {
   });
 
   test('The program should allow the user to equip an item from their inventory', () => {
+    character.addItem(wateringCan);
     character.equipWeapon(wateringCan);
     expect(character.equipped).toContain(wateringCan);
+  });
+
+  test('The program should allow the user to unequip items back into their inventory', () => {
+    character.addItem(wateringCan);
+    character.equipWeapon(wateringCan);
+    character.unequipWeapon(wateringCan);
+    expect(character.inventory).toContain(wateringCan);
   });
 })
