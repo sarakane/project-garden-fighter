@@ -63,7 +63,6 @@ describe('Character', () => {
 
   test('The program should allow the player character to gain health', () => {
     wizard.gainHealth(5);
-    console.log(wizard);
     expect(wizard.health).toBe(20);
   });
 });

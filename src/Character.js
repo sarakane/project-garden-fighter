@@ -15,7 +15,6 @@ export class Character {
       this.inventory.push(item);
       return true;
     } else {
-      console.log('Your inventory is full! Drop an item!');
       return false;
     }
   }
