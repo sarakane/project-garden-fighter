@@ -9,7 +9,13 @@ export class Character {
   }
 
   addItem(item) {
-    this.inventory.push(item);
+    if(this.inventory.length  < 5){
+      this.inventory.push(item);
+      return true;
+    } else {
+      console.log('Your inventory is full! Drop an item!');
+      return false;
+    }
   }
 
   dropItem(item) {
@@ -30,7 +36,7 @@ export class Character {
 
   unequipWeapon(weapon) {
     if (this.equipped.includes(weapon)) {
-      this.inventory.push(weapon);
+      this.addItem(weapon);
       this.equipped.splice(this.equipped.indexOf(weapon), 1);
       this.stats.strength -= weapon.strength;
       this.stats.magic -= weapon.magic;

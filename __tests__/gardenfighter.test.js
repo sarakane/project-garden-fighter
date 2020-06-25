@@ -42,6 +42,17 @@ describe('Character', () => {
     character.equipWeapon(wateringCan);
     character.unequipWeapon(wateringCan);
     expect(character.inventory).toContain(wateringCan);
+  });
+
+  test('The program should assign a finite value to the inventory', () => {
+    character.addItem("flower seeds");
+    character.addItem("slug potion");
+    character.addItem("soil");
+    character.addItem(wateringCan);
+    character.addItem("mushroom friend");
+    console.log(character);
+    console.log(character.inventory.length);
+    expect(character.addItem("honey")).toBe(true);
     console.log(character);
   });
 })
