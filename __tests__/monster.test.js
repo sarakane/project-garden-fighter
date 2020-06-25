@@ -1,14 +1,20 @@
-import { Monster } from './../src/monster.js';
+import { Monster, Slug } from './../src/monster.js';
 
 describe('Monster', () => {
-  let slug;
+  let snail;
+  let otherSlug;
 
   beforeEach(() => {
-    slug = new Monster("Slug", 2, 2);
+    snail = new Monster("Snail", 2, 2);
+    otherSlug = new Slug("green");
   });
 
   test('The program should create a monster', () => {
-    expect(slug).toMatchObject({monstClass:"Slug", strength:2, magic:2});
-  })
+    expect(snail).toMatchObject({monstClass: "Snail", powerLevel: 2, experienceAmount: 2});
+  });
 
+  test('This is an extends test', () => {
+    console.log(otherSlug);
+    expect(otherSlug).toMatchObject({monstClass: "Slug", powerLevel: 2, experienceAmount: 5, color: "green"});
+  });
 })

@@ -1,5 +1,6 @@
 import { Character } from "./Character";
 import { Weapon } from "./Weapon";
+import { Monster, Slug } from "./Monster";
 
 export class Game {
   constructor (character) {
@@ -20,4 +21,12 @@ export class Game {
       this.character.equipWeapon(spade);
     }
   }
+
+  battleMonster(monster) {
+    if ((this.character.strength + this.character.magic) < monster.powerLevel) {
+      this.character.loseHealth(monster.powerLevel - (this.character.strength + this.character.magic));
+    } else if ((this.character.strength + this.character.magic) >= monster.powerLevel) {
+      this.character.experience += monster.experienceAmount;
+    } 
+  } 
 };

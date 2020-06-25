@@ -5,6 +5,7 @@ export class Character {
     this.strength = strength;
     this.magic = magic;
     this.health = health;
+    this.experience = 0;
     this.level = 1;
     this.inventory = [];
     this.equipped = [];  
