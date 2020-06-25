@@ -52,7 +52,7 @@ describe('Character', () => {
     character.addItem("mushroom friend");
     console.log(character);
     console.log(character.inventory.length);
-    expect(character.addItem("honey")).toBe(true);
+    expect(character.addItem("honey")).toBe(false);
     console.log(character);
   });
 })
