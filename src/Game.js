@@ -29,9 +29,13 @@ export class Character {
   } 
 
   unequipWeapon(weapon) {
-    
+    if (this.equipped.includes(weapon)) {
+      this.inventory.push(weapon);
+      this.equipped.splice(this.equipped.indexOf(weapon), 1);
+      this.stats.strength -= weapon.strength;
+      this.stats.magic -= weapon.magic;
+    }
   }
-
 };
 
   

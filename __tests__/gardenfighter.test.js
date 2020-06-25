@@ -42,5 +42,6 @@ describe('Character', () => {
     character.equipWeapon(wateringCan);
     character.unequipWeapon(wateringCan);
     expect(character.inventory).toContain(wateringCan);
+    console.log(character);
   });
 })
