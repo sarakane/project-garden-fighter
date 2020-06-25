@@ -6,7 +6,7 @@ export class Game {
     this.character = character;
   }
   giveCharacterStartingWeapon() {
-/*     if(this.character.charClass === "Fighter"){
+    if(this.character.charClass === "Fighter"){
       let shovel = new Weapon("Shovel", 5, 0);
       this.character.addItem(shovel);
       this.character.equipWeapon(shovel);
@@ -18,6 +18,6 @@ export class Game {
       let spade = new Weapon("Spade", 3, 3);
       this.character.addItem(spade);
       this.character.equipWeapon(spade);
-    } */
+    }
   }
 };
