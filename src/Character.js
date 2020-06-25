@@ -50,6 +50,6 @@ export class Character {
   }
 
   gainHealth(amount) {
-    
+    this.health += amount;
   }
 };
