@@ -34,7 +34,14 @@ describe ('Game', () => {
   test('The program should increase a characters experience if they win a battle', () => {
     game.giveCharacterStartingWeapon();
     game.battleMonster(slug);
-    console.log(game.character);
     expect(game.character.experience).toEqual(5);
+  });
+
+  test('The program should increase a characters level if they win a battle and their experience reaches the level cap', () => {
+    game.giveCharacterStartingWeapon();
+    game.battleMonster(slug);
+    game.battleMonster(slug);
+    console.log(game.character);
+    expect(game.character.level).toEqual(2);
   });
 });

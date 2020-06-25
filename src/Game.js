@@ -25,8 +25,22 @@ export class Game {
   battleMonster(monster) {
     if ((this.character.strength + this.character.magic) < monster.powerLevel) {
       this.character.loseHealth(monster.powerLevel - (this.character.strength + this.character.magic));
+      if(this.character.health <= 0) {
+        console.log("YOU LOST!");
+      }
     } else if ((this.character.strength + this.character.magic) >= monster.powerLevel) {
       this.character.experience += monster.experienceAmount;
+      this.levelUp();
     } 
   } 
+
+  levelUp() {
+    if (this.character.experience >= (10 * this.character.level)) {
+      this.character.level +=1;
+      this.character.strength +=2;
+      this.character.magic +=2;
+      this.character.experience = 0;
+    }
+  }
+
 };
