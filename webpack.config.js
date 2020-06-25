@@ -17,7 +17,7 @@ plugins: [
   new UglifyJsPlugin({ sourceMap: true }),
   new CleanWebpackPlugin(),
   new HtmlWebpackPlugin({
-    title: 'My Project',
+    title: 'Garden Fighter',
     template: './src/index.html',
     inject: 'body'
   })
