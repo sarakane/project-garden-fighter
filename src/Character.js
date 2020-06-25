@@ -48,4 +48,8 @@ export class Character {
   loseHealth(amount) {
     this.health -= amount;
   }
+
+  gainHealth(amount) {
+    
+  }
 };
